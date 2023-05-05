@@ -51,6 +51,8 @@ class App extends React.Component {
   }
 
   onSendMessage = (message) => {
+    //quick fix for sending empty message
+    if (message.length === 0) return;
     this.drone.publish({
       room: "observable-room",
       message
