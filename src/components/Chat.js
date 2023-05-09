@@ -18,10 +18,10 @@ function randomName() {
   
 class Chat extends React.Component {
 
-  constructor() {
-    super();
-    //channel ID je CqxAegA5sXfiS9c4
-    this.drone = new window.Scaledrone("CqxAegA5sXfiS9c4", {
+  constructor(props) {
+    super(props);
+    //tvoj channel ID je CqxAegA5sXfiS9c4 / zajednički je PnFavtIMvMsf69yV
+    this.drone = new window.Scaledrone("PnFavtIMvMsf69yV", {
       data: this.state.member
     });
     this.drone.on('open', error => {
@@ -46,7 +46,7 @@ class Chat extends React.Component {
   state = {
     messages: [],
     member: {
-      username: randomName(),
+      username: this.props.username,
       color: randomColor()
     }
   }
@@ -69,7 +69,7 @@ class Chat extends React.Component {
       <div className="App">
         <div className="App-header">
           <button className='sidebar-btn' onClick={this.toggleSidebar}>Sidebar</button>
-        <h1>Algebra Seminar</h1>
+        <h1>{this.props.username}'s Chat Room</h1>
         <div></div>
       </div>
       <Sidebar ref={(reference) => this.sidebar = reference}/>
