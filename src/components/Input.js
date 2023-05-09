@@ -28,7 +28,7 @@ render() {
             //pisalo "autofocus i true je bio pod navodnicima, bacalo error"
             autoFocus={true}
           />
-          <button>Send</button>
+          <button class="btn-send">Send</button>
         </form>
       </div>
     );
