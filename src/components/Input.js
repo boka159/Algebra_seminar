@@ -1,4 +1,4 @@
-import {Component} from "react";
+import { Component } from "react";
 import React from "react";
 
 class Input extends Component {
@@ -8,11 +8,11 @@ class Input extends Component {
   }
 
   onChange(e) {
-    this.setState({text: e.target.value});
+    this.setState({ text: e.target.value });
   }
   onSubmit(e) {
     e.preventDefault();
-    this.setState({text: ""});
+    this.setState({ text: "" });
     this.props.onSendMessage(this.state.text);
   }
 
@@ -20,8 +20,8 @@ class Input extends Component {
   render() {
     return (
       <div className="Input">
-        <form onSubmit={e => this.onSubmit(e)}>
-          <input
+        <form className="message-area" onSubmit={e => this.onSubmit(e)}>
+          <input className="message-area-input"
             onChange={e => this.onChange(e)}
             value={this.state.text}
             type="text"
