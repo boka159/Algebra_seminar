@@ -32,7 +32,7 @@ class App extends React.Component {
         <Header toggleSidebar={this.toggleSidebar} username={this.state.username} handleLogout={this.handleLogout} />
         <Sidebar ref={(reference) => this.sidebar = reference} />
         <Routes>
-          <Route path="/"
+          <Route path="/Algebra_seminar"
             element={this.state.username ? <Chat username={this.state.username} /> : <Navigate to="/login" />} />
           <Route path="/login" element={<Login onLogin={this.handleLogin} username={this.state.username} />} />
           <Route path="/about" element={this.state.username ? <About /> : <Navigate to="/login" />} />
