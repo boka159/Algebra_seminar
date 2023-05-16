@@ -3,7 +3,7 @@ const Header = (props) => {
   const isLoggedIn = !!props.username;
   return (
     <>
-      {/* Prazan react fragment, služi istu svrhu kao i div, ali manje opterećuje DOM */}
+      {/* Prazan react fragment, ima istu svrhu kao i div, ali manje opterećuje DOM */}
       {isLoggedIn &&
         <div className="App-header">
           <button className='sidebar-btn' onClick={props.toggleSidebar}>Sidebar</button>

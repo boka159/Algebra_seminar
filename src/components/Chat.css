@@ -1,3 +1,6 @@
+/* hide scroll nakon što bude dovoljno poruka da ti polomi ekran*/
+/* popravi da se stranica ne lomi ako je potrebno scrollat kroz poruke*/
+
 .Chat {
   display: flex;
   flex-direction: column;
@@ -31,7 +34,6 @@
 }
 
 .Messages-message.currentMember {
-  /*justify-content: flex-end;*/
   flex-direction: row-reverse;
   text-align: right;
 }
