@@ -12,13 +12,13 @@ class Chat extends React.Component {
   constructor(props) {
     super(props);
     //tvoj channel ID je CqxAegA5sXfiS9c4 / zajednički je PnFavtIMvMsf69yV
-    this.drone = new window.Scaledrone("PnFavtIMvMsf69yV", {
+    this.drone = new window.Scaledrone("CqxAegA5sXfiS9c4", {
       data: this.state.member
     });
     this.drone.on('open', error => {
       if (error) {
         //tu mijenjamo u slučaju greške sa servisom (npr. alert error popup)
-        return console.error(error);
+        return alert.error(error);
       }
       const member = { ...this.state.member };
       member.id = this.drone.clientId;
@@ -62,9 +62,6 @@ class Chat extends React.Component {
       </div>
     );
   }
-
-
-
 }
 
 export default Chat;

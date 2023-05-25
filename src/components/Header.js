@@ -8,7 +8,7 @@ const Header = (props) => {
         <div className="App-header">
           <button className='sidebar-btn' onClick={props.toggleSidebar}>Sidebar</button>
           <h1>{props.username}'s Chat Room</h1>
-          <button onClick={props.handleLogout}>Logout</button>
+          <button className='logout-btn' onClick={props.handleLogout}>Logout</button>
         </div>}
 
       {!isLoggedIn && <div className="App-header">

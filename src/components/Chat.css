@@ -1,18 +1,15 @@
-/* hide scroll nakon što bude dovoljno poruka da ti polomi ekran*/
-/* popravi da se stranica ne lomi ako je potrebno scrollat kroz poruke*/
-
 .Chat {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+  height: 90vh;
 }
 
 .App-header {
   background-color: rgba(0, 0, 0, 0.5);
   overflow: visible;
   width: 100%;
-  color: white;
+  color: #f4fdff;
   display: flex;
   justify-content: space-between;
 }
@@ -26,6 +23,10 @@
   padding-left: 0;
   flex-grow: 1;
   overflow: auto;
+}
+
+.Messages-list::-webkit-scrollbar {
+  display: none;
 }
 
 .Messages-message {
@@ -56,7 +57,7 @@
 
 .Message-content>.username {
   display: block;
-  color: gray;
+  color: #f4fdff;
   font-size: 14px;
   padding-bottom: 4px;
 }
@@ -66,13 +67,13 @@
   max-width: 400px;
   margin: 0;
   border-radius: 12px;
-  background-color: cornflowerblue;
-  color: white;
+  background-color: rgb(100, 237, 139);
+  color: black;
   display: inline-block;
 }
 
 .currentMember>.Message-content .text {
-  background-color: orangered;
+  background-color: #f4fdff;
 }
 
 .message-area {
@@ -81,25 +82,34 @@
   justify-content: space-between;
   max-width: 900px;
   margin: 0 auto 40px;
+
 }
+
 
 .message-area-input {
   padding: 5px;
   font-size: 16px;
   border-radius: 8px;
-  border: 3px solid orangered;
+  border: 3px solid black;
   flex-grow: 1;
+  background-color: #f4fdff;
 }
 
 .btn-send {
   padding: 5px 10px;
   font-size: 16px;
-  background-color: orangered;
-  color: white;
-  border: none;
+  background-color: #f4fdff;
+  color: black;
+  border: 3px solid black;
 }
 
 .btn-send {
   border-radius: 8px;
   margin-left: 10px;
+}
+
+.btn-send:hover {
+  background-color: #857e7b;
+  color: #f4fdff;
+  transition: 0.2s ease-in-out;
 }

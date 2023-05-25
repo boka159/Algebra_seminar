@@ -1,33 +1,46 @@
 @import url(https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css);
 
 .btn-primary {
-  border-color: orangered;
-  background-color: orangered;
-  color: #fff;
+  border: none;
+  background: rgba(44, 123, 50, 0.628);
+  color: #000000;
+
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 4px 5px rgba(0, 0, 0, 0);
 }
+
+.btn-primary:hover {
+  background-color: #857e7b;
+}
+
 .navbar {
   border-radius: 5px;
 }
+
 .sidebar {
+  font-family: sans-serif;
   width: 280px;
   min-height: 100vh;
   box-shadow: 0px 4px 8px rgb(0 0 0 / 16%);
-  background-color: #fff;
+  background-color: #f4fdff;
   position: fixed;
   top: 0;
   left: -100%;
-  z-index: 1;
+  z-index: 999;
   transition: 0.5s;
+  border-radius: 0 15px 15px 0;
 }
+
 .sidebar.active {
   left: 0;
 }
+
 .sd-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px;
 }
+
 .sidebar-overlay {
   position: fixed;
   top: 0;
@@ -39,32 +52,54 @@
   opacity: 0;
   visibility: hidden;
 }
+
 .sidebar-overlay.active {
   opacity: 1;
   visibility: visible;
 }
+
 .sd-body {
+  font-family: sans-serif;
   padding: 15px;
   max-height: calc(100vh - 67px);
   overflow-x: hidden;
 }
+
 .sd-body ul {
   display: inline-block;
   width: 100%;
   margin-bottom: 0;
   padding: 0;
 }
+
 .sd-body ul li {
   list-style: none;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
 }
+
 .sd-body ul li .sd-link {
   display: inline-block;
   width: 100%;
   padding: 10px 16px;
-  color: #475f7b;
-  background-color: #e5e8ec;
+  color: #000000;
+  background: repeating-linear-gradient(#f4fdff, #214e34);
   border-radius: 4px;
   cursor: pointer;
   text-decoration: none;
+
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 4px 5px rgba(0, 0, 0, 0);
+}
+
+.sidebar-btn,
+.logout-btn {
+  border-radius: 10px;
+  color: #000000;
+  background: #f4fdff;
+}
+
+.sidebar-btn:hover,
+.logout-btn:hover {
+  background-color: #857e7b;
+  color: #f4fdff;
+  transition: 0.2s ease-in-out;
 }
