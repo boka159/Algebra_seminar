@@ -12,6 +12,7 @@
   color: #f4fdff;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10%;
 }
 
 .Messages-list {
