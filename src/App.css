@@ -8,16 +8,3 @@
   font-family: sans-serif;
   background: linear-gradient(#24552d, rgba(0, 0, 0, .5), #24552d);
 }
-
-@media (max-width: 1024px) {
-  .App {
-    height: auto;
-
-  }
-}
-
-@media (max-width: 720px) {
-  .App {
-    height: auto;
-  }
-}
