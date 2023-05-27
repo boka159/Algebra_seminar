@@ -18,7 +18,7 @@ class Messages extends Component {
   render() {
     const { messages } = this.props;
     return (
-      //div je dummy na koji ide referenca pa svaki puta kada se komponenta updatea, scrolla se do njega
+      //div je dummy na koji ide referenca pa svaki puta kada se komponenta updatea/mounta, scrolla se do njega
       <ul className="Messages-list">
         {messages.map(m => this.renderMessage(m))}
         <div ref={el => { this.el = el; }} />
